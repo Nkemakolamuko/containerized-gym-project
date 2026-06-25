@@ -11,6 +11,7 @@ COPY package*.json /app
 RUN npm ci
 
 COPY --exclude=Dockerfile.dev . .
+COPY --exclude=/spec . .
 
 COPY . /app
 
