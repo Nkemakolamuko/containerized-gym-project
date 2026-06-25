@@ -36,3 +36,11 @@ During development, the frontend and backend run as separate services because th
 ## The Challenge
 
 See [`CHALLENGE.md`](./CHALLENGE.md) for the full challenge instructions and learning objectives.
+
+# IMPORTANT NOTE
+## Use
+```
+    docker build -f Dockerfile.prod -t <app-name> .
+    docker image ls (to see the docker ID)
+    docker run -p 3000:3000 <image ID>
+```
