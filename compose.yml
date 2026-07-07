@@ -46,6 +46,18 @@ services:
       interval: 5s
       timeout: 5s
       retries: 10
+   
+  phpmyadmin:
+    image: phpmyadmin
+    depends_on:
+      - db
+    restart: always
+    ports: 
+      - 8080:80
+    environment:
+      - MY_SQL_USER=slim
+      - MY_SQL_PASSWORD=slim:password 
+      - MySQL_DB=todos
 
 volumes:
   todo_data:
